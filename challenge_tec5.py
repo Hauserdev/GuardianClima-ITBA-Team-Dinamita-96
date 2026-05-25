@@ -14,6 +14,10 @@ from datetime import datetime
 import google.generativeai as genai
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+from dotenv import load_dotenv
+
+# Cargar las variables de entorno desde el archivo .env oculto
+load_dotenv()
 
 # Clase para el manejo de estilos de color en la terminal mediante códigos ANSI
 class Color:
@@ -27,9 +31,16 @@ class Color:
     FIN = '\033[0m'
 
 USERS_FILE = 'usuarios_simulados.csv'
-OWM_API_KEY = os.getenv('OWM_API_KEY', "cf3bfe679feca9c9f2994ada453f6df8")
-GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', "AIzaSyC65qFuF4c7lR2iB7ZRJsnk64XpT1RcqRg")
 
+# Extracción segura de las credenciales
+OWM_API_KEY = os.getenv("OPENWEATHER_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+# Validación preventiva de seguridad
+if not OWM_API_KEY or not GEMINI_API_KEY:
+    print(f"{Color.ROJO}{Color.BOLD}ERROR CRITICO: No se encontraron las API Keys.{Color.FIN}")
+    print(f"{Color.AMARILLO}Asegurate de haber creado el archivo .env con OPENWEATHER_API_KEY y GEMINI_API_KEY.{Color.FIN}")
+    exit()
 # =====================================================================
 # MÓDULO DE FUINCIONES PARA USUARIOS
 # =====================================================================
