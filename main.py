@@ -1,1 +1,2 @@
 nachito = "prueba"
+print(nachito)
