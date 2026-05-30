@@ -405,7 +405,7 @@ def mostrar_acerca_de() -> None:
     W = Color.FIN
     BOLD = Color.BOLD
 
-    print(C + BOLD + """
+    print(C + BOLD + r"""
   _____                      _ _             _____ _ _
  / ____|                    | (_)           / ____| (_)
 | |  __ _   _  __ _ _ __  __| |_  __ _ _ __| |    | |_ _ __ ___   __ _
