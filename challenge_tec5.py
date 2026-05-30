@@ -455,7 +455,7 @@ def mostrar_acerca_de() -> None:
     print(R + """  .----'-'----.   """ + W + "  • Tomas Hauser          " + BOLD + "Legajo: " + W + "69193")
     print(R + """ |  """ + Y + BOLD + "DINAMITA" + R + """  |   """ + W + "  • Lautaro Kilimik       " + BOLD + "Legajo: " + W + "68951")
     print(R + """ | """ + B + BOLD + "COMISION U" + R + """ |   """ + W + "  • Ignacio Frontera      " + BOLD + "Legajo: " + W + "68767")
-    print(R + """  '------------'  """ + W + "  • Ignacio Herrera       " + BOLD + "Legajo: " + Y + "[Pendiente]" + W)
+    print(R + """  '------------'  """ + W + "  • Ignacio Herrera       " + BOLD + "Legajo: " + Y + "68674" + W)
     print(B + "=" * 80 + W)
 
 
